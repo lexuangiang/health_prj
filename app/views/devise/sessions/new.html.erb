@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="card card-container">
+    <h2 class="text-center">Sign in</h2>
+    <%= image_tag "logo.png", class: "profile-img-card" %>
+    <p id="profile-name" class="profile-name-card"></p>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <form class="form-signin">
+      <span id="reauth-email" class="reauth-email"></span>
+      <%= f.input :email, label: false, required: false, autofocus: true, placeholder: "yourmail@example.com", input_html: {maxlength: 15, size: 30, class: "form-control"} %><br/>
+      <%= f.input :password, label: false, required: false, placeholder: "Password", input_html: {maxlength: 15, size: 30, class: "form-control"} %>
+      <div id="remember" class="checkbox">
+        <label>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </label>
+      </div>
+      <%= f.button :submit, "Log in", class: "btn btn-lg btn-primary btn-block btn-signin" %>
+    </form>
+    <!-- /form -->
+    <label>New here?
+    </label>
+    <%= link_to "Join Us", new_registration_path(resource_name) %>
+    <label>Forgot your password?</label>
+    <%= link_to "Reset here", new_password_path(resource_name) %>
+    <% end %>
+  </div>
+  <!-- /card-container -->
+</div>

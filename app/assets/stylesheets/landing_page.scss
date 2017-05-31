@@ -420,3 +420,24 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #F05F40;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+.logo{
+  color: #F05F40 !important;
+}
