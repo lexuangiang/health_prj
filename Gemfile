@@ -17,6 +17,7 @@ gem "bootstrap-sass", "~> 3.3.6"
 gem "font-awesome-rails"
 gem "devise"
 gem "simple_form"
+gem "omniauth-facebook"
 
 group :development, :test do
   gem "sqlite3"
